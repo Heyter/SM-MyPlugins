@@ -123,7 +123,6 @@ public void OnLevelInit() {
 }
 
 public void OnEntityDestroyed(int entity) {
-	PrintToServer("%N", entity);
 	if (entity > MaxClients && m_NetVar != null)
 		m_NetVar.Close(entity);
 }
