@@ -34,12 +34,17 @@ methodmap EntityMap < StringMap {
 		IntToString(entity, ref, sizeof(ref));
 	
 		StringMap data;
+		
 		if (!this.GetValue(ref, data)) {
 			strcopy(value, maxlen, def_value);
 			return false;
 		}
 		
-		return data.GetString(key, value, maxlen);
+		bool found;
+		if (!(found = data.GetString(key, value, maxlen)))
+			strcopy(value, maxlen, def_value);
+		
+		return found;
 	}
 	
 	public bool SetEntityValue(int entity, const char[] key, any value, bool replace = true) {
@@ -76,8 +81,8 @@ methodmap EntityMap < StringMap {
 		return data.SetString(key, value, replace);
 	}
 	
-	public void Close(int entity = 0) {
-		if (!entity) {
+	public void Close(int entity = -1) {
+		if (entity == -1) {
 			StringMapSnapshot snapshot = this.Snapshot();
 			
 			int len = snapshot.Length;
@@ -108,6 +113,7 @@ static EntityMap m_NetVar;
 
 public void OnPluginStart() {
 	m_NetVar = new EntityMap();
+	m_NetVar.GetEntityString(1, "test", "sexy", 4);
 }
 
 public void OnLevelInit() {
