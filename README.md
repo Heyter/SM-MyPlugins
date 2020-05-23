@@ -1,0 +1,2 @@
+# SM-MyPlugins
+Sourcemod plugins
