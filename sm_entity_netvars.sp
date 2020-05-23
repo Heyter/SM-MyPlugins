@@ -113,7 +113,6 @@ static EntityMap m_NetVar;
 
 public void OnPluginStart() {
 	m_NetVar = new EntityMap();
-	m_NetVar.GetEntityString(1, "test", "sexy", 4);
 }
 
 public void OnLevelInit() {
@@ -124,6 +123,7 @@ public void OnLevelInit() {
 }
 
 public void OnEntityDestroyed(int entity) {
+	PrintToServer("%N", entity);
 	if (entity > MaxClients && m_NetVar != null)
 		m_NetVar.Close(entity);
 }
