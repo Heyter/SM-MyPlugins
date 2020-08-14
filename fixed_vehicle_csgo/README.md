@@ -15,4 +15,4 @@ CVehicleController::CVehicleController -> 55 8B EC 83 E4 F0 81 EC ? ? ? ? 8B 45 
 
 ##### Bugs
 
-If server crashed when vehicle using handbrake, then set "skidallowed" to 0 ( scripts/vehicles/your_car.txt )
+If server crashes when vehicle using handbrake, then set "skidallowed" to 0 ( scripts/vehicles/your_car.txt )
