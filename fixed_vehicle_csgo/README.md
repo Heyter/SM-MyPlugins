@@ -12,3 +12,7 @@ CVehicleController::CVehicleController -> 55 89 E5 81 EC ? ? ? ? 8B 45 10 89 5D 
 
 ###### Windows
 CVehicleController::CVehicleController -> 55 8B EC 83 E4 F0 81 EC ? ? ? ? 8B 45 0C 56
+
+##### Bugs
+
+If server crashed when vehicle using handbrake, then set "skidallowed" to 0 ( scripts/vehicles/your_car.txt )
