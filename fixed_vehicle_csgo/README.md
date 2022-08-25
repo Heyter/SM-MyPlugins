@@ -1,9 +1,7 @@
-I will post the extension later if I find someone who will write it.
-
 Windows: OK \
 Linux: OK
 
-Place binary to server_csgo/bin/ ( where lies srcds )
+Place binary to server_csgo/bin/
 
 ##### Signatures
 
@@ -15,5 +13,5 @@ CVehicleController::CVehicleController -> 55 8B EC 83 E4 F0 81 EC ? ? ? ? 8B 45 
 
 ##### Bugs
 
-If server crashes when vehicle using handbrake, then set "skidallowed" to 0 ( scripts/vehicles/your_car.txt ) \
+If the server crashes when using the handbrake then set "skidallowed" to 0 ( scripts/vehicles/your_car.txt ) \
 or change "material" , "skidmaterial" , "brakematerial" on default values.
